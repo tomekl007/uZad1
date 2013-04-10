@@ -21,9 +21,7 @@ public class MainClass {
 	
 	 public Integer i;
 
-	/**
-	 * @param args
-	 */
+	
 	public static void main(String[] args) {
 		//initialize
 		
@@ -112,7 +110,7 @@ public class MainClass {
 				for(String s : l ){
 					String attemp = stringToMap.substring(0, i)+
 							s+stringToMap.substring(i+1,stringToMap.length());
-					System.out.println(attemp);
+					System.out.println(i + " "+ attemp);
 					printAllCompinations(attemp);
 				}
 			

@@ -19,6 +19,8 @@ public class MainClass {
 	static List<String> nr8 = new LinkedList<>();
 	static List<String> nr9 = new LinkedList<>();
 	
+	static List<String> results = new LinkedList<>();
+	
 	 public Integer i;
 
 	
@@ -79,7 +81,7 @@ public class MainClass {
 		keyMapping.put(8, nr8);
 		keyMapping.put(9, nr9);
 		
-		System.out.println(keyMapping);
+		
 		
 		
 		printAllCompinations(args[0]);
@@ -110,7 +112,11 @@ public class MainClass {
 				for(String s : l ){
 					String attemp = stringToMap.substring(0, i)+
 							s+stringToMap.substring(i+1,stringToMap.length());
-					System.out.println(i + " "+ attemp);
+					
+					if(!results.contains(attemp)){
+						results.add(attemp);
+						System.out.println(attemp);
+					}
 					printAllCompinations(attemp);
 				}
 			
